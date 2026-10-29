@@ -181,3 +181,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+    // ==========================================
+    // 6. DYNAMIC DATE
+    // ==========================================
+
+document.getElementById('year').textContent = new Date().getFullYear();
