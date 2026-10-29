@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illustration Projects - Matthew Taylor</title>
+    <link rel="stylesheet" href="/assets/css/style.css?v=2">
+</head>
+<body>
+
+    <header>
+    <div class="logo">
+        <a href="/" class="logo-link">Matthew Taylor</a>
+    </div>
+    
+    <button class="hamburger-toggle" id="hamburger-btn" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
+    <nav class="nav-menu" id="nav-menu">
+        
+            
+                <!-- Standard Page Links -->
+                <a href="/" 
+                   style="--i: 0;"
+                   class="">
+                    Latest Illustrations
+                </a>
+            
+        
+            
+                <!-- Standard Page Links -->
+                <a href="/collections/collections/" 
+                   style="--i: 1;"
+                   class="">
+                   Collections
+                </a>
+            
+        
+            
+                <!-- Modal or Anchor Links -->
+                <a href="#about" 
+                   style="--i: 2;" 
+                   id="nav-about-link">
+                   About
+                </a>
+            
+        
+            
+                <!-- Modal or Anchor Links -->
+                <a href="#contact" 
+                   style="--i: 3;" 
+                   id="nav-contact-link">
+                   Contact
+                </a>
+            
+        
+    </nav>
+</header>
+
+    <main class="site-content">
+        <section class="hero">
+    <h1>Classical & Revivalist Portals: Gallery</h1>
+    <p>Architectural Doorway & Portal Elevation</p>
+</section>
+
+<section class="gallery-section">
+    <div class="gallery-grid">
+        
+        <div class="gallery-card">
+            <!-- Using .project-img triggers your existing lightbox script automatically -->
+            <img src="/assets/images/img41.jpeg" alt="Neoclassical Portal Elevation" class="project-img">
+            <div class="gallery-card-info">
+                <h3>Neoclassical Portal Elevation</h3>
+                <p>An orthographic line drawing of a formal neoclassical doorway featuring a six-paneled door, rosette frieze, flanking pilasters, and a triangular pediment with a central heraldic shield.</p>
+            </div>
+        </div>
+        
+        <div class="gallery-card">
+            <!-- Using .project-img triggers your existing lightbox script automatically -->
+            <img src="/assets/images/img43.jpeg" alt="Edwardian Transom Doorway" class="project-img">
+            <div class="gallery-card-info">
+                <h3>Edwardian Transom Doorway</h3>
+                <p>An architectural line elevation of an Edwardian entranceway centered on a radiant sunburst leaded glass transom window beneath a clean triangular pediment.</p>
+            </div>
+        </div>
+        
+        <div class="gallery-card">
+            <!-- Using .project-img triggers your existing lightbox script automatically -->
+            <img src="/assets/images/img40.jpeg" alt="Baroque Revival Entrance" class="project-img">
+            <div class="gallery-card-info">
+                <h3>Baroque Revival Entrance</h3>
+                <p>A precise vector elevation of a baroque-inspired doorway featuring a prominent broken pediment, central finial, multi-light upper glazing, and smooth flanking columns.</p>
+            </div>
+        </div>
+        
+        <div class="gallery-card">
+            <!-- Using .project-img triggers your existing lightbox script automatically -->
+            <img src="/assets/images/img46.jpeg" alt="Palladian-Style Entryway" class="project-img">
+            <div class="gallery-card-info">
+                <h3>Palladian-Style Entryway</h3>
+                <p>An architectural elevation of a Palladian entrance assembly featuring a six-paneled timber door, a radial semi-circular fanlight, and classic fluted columns supporting a sharp pediment.</p>
+            </div>
+        </div>
+        
+        <div class="gallery-card">
+            <!-- Using .project-img triggers your existing lightbox script automatically -->
+            <img src="/assets/images/img42.jpeg" alt="Segmental Archway Elevation" class="project-img">
+            <div class="gallery-card-info">
+                <h3>Segmental Archway Elevation</h3>
+                <p>A formal vector elevation of a monumental arched doorway with a segmental pediment, a radial fanlight, multi-pane upper glazing, and a rhythmic frieze supported by miniature pilasters.</p>
+            </div>
+        </div>
+        
+        <div class="gallery-card">
+            <!-- Using .project-img triggers your existing lightbox script automatically -->
+            <img src="/assets/images/img47.jpeg" alt="Mannerist Revival Entrance" class="project-img">
+            <div class="gallery-card-info">
+                <h3>Mannerist Revival Entrance</h3>
+                <p>An ornate architectural elevation displaying nested Renaissance orders, featuring heavy fluted columns, decorative finials, complex compound moldings, and an inner pedimented portal.</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Centered Glassmorphic Text Overview Box -->
+    
+    <div class="series-overview-wrapper">
+        <div class="series-overview-card">
+            <h2>About this collection</h2>
+            <p>This collection comprises six technical vector line drawings detailing traditional British and Western revivalist architectural door assemblies and surrounds. Drawn in strict orthographic elevation, each piece catalogs historical door proportions, Classical orders, and ornamental joinery, reflecting styles from the Neoclassical, Baroque, Edwardian, Palladian, and Mannerist periods.</p>
+        </div>
+    </div>
+    
+    
+<div class="series-back-link">
+    <a href="/collections/collections/">&larr; Back to Collections</a>
+</div>
+
+</section>
+    </main>
+
+    <footer id="contact">
+    <p>&copy; 2026 Matthew Taylor. All rights reserved.</p>
+</footer>
+
+    <!-- Lightbox Modal -->
+
+
+      <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <span class="nav-btn prev-btn">&#10094;</span>
+        <div class="lightbox-content">
+            <img class="lightbox-img" id="lightbox-img" alt="Enlarged project view">
+            <p id="lightbox-title"></p>
+            <p id="lightbox-hint" class="lightbox-hint">Swipe to browse</p>
+        </div>
+        <span class="nav-btn next-btn">&#10095;</span>
+    </div>
+
+
+<!-- About Modal Overlay -->
+<div id="about-modal" class="full-screen-modal">
+        <button class="modal-close-btn about-close-btn" aria-label="Close about modal">&times;</button>
+        <div class="modal-content">
+            <h2>About the Project</h2>
+            <p class="about-lead">
+                This illustration series explores classical architectural language and craftsmanship through the concept of <strong>spoliation</strong>—reimagining historical elements like Mannerist volutes and Renaissance pediments in new digital compositions.
+            </p>
+            <p>
+                By combining disparate motifs through precise draftsmanship, proportion, and geometry, the project honors traditional architectural syntax while expanding its creative boundaries beyond rigid replication.
+            </p>
+            <p>All illustrations in this project are 100% human-created. No artificial intelligence was used to generate or synthesize any visual content.</p>
+        </div>
+    </div>
+
+  
+
+    <!-- Contact Full-Screen Modal -->
+    <div id="contact-modal" class="full-screen-modal">
+        <button class="modal-close-btn contact-close-btn" aria-label="Close contact modal">&times;</button>
+        <div class="modal-content">
+            <h2>Get in Touch</h2>
+            <p class="contact-subtitle">For commissions, inquiries, or collaboration opportunities:</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email:</strong>
+                    <span>mrmatthewtaylor@protonmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Location:</strong>
+                    <span>United Kingdom</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">&#8679;</button>
+
+    <script src="/assets/js/script.js"></script>
+
+
+</body>
+</html>
