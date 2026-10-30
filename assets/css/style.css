@@ -254,6 +254,21 @@ nav a.active-link {
     cursor: pointer;
 }
 
+.project-img {
+  outline: none;
+  user-select: none;
+}
+
+.project-img:focus, 
+.project-img:active {
+  transform: none !important;
+}
+
+.project-img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
 
 /* ==========================================================================
    Modals & Full-Screen Overlays
