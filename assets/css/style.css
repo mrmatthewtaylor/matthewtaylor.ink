@@ -24,7 +24,7 @@ body {
     line-height: 1.6;
     
     /* --- Full Coverage Background Image --- */
-    background-image: url('../images/bg-img1.jpg'); 
+    background-image: url('../images/bg-img1.webp'); 
     background-size: cover;          /* Stretches image to cover the entire screen */
     background-position: center top;  /* Centers the image horizontally */
     background-repeat: no-repeat;    /* Prevents the image from tiling/repeating */
@@ -116,7 +116,7 @@ body.nav-open {
     width: 100vw; 
     height: 100vh;
     z-index: 2000;
-    background-image: url('../images/bg-img2.jpg');
+    background-image: url('../images/bg-img2.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -265,7 +265,7 @@ nav a.active-link {
     width: 100vw; 
     height: 100vh;
     z-index: 2500;
-    background-image: url('../images/bg-img1.jpg');
+    background-image: url('../images/bg-img1.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
