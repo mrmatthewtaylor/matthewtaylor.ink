@@ -229,12 +229,6 @@ nav a.active-link {
     overflow: hidden;
 }
 
-.project-card, .gallery-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Let the card height adjust naturally or set a flexible container */
-}
 
 .project-card h3, .gallery-card-info h3 { 
     font-size: 1.15rem; 
