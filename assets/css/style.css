@@ -1,5 +1,6 @@
-/* =================================================================/ Global Setup */
-/* Completely eliminate Chrome's mobile tap highlight globally */
+/* ==========================================================================
+   Global Setup
+   ========================================================================== */
 html, body, * {
   -webkit-tap-highlight-color: transparent !important;
   -webkit-touch-callout: none !important;
@@ -11,13 +12,6 @@ html, body, * {
     padding: 0;
 }
 
-/* Remove the default mobile tap highlight flash */
-img, 
-a, 
-.gallery-item {
-  -webkit-tap-highlight-color: transparent;
-}
-
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
@@ -25,10 +19,10 @@ body {
     
     /* --- Full Coverage Background Image --- */
     background-image: url('../images/bg-img1.webp'); 
-    background-size: cover;          /* Stretches image to cover the entire screen */
-    background-position: center top;  /* Centers the image horizontally */
-    background-repeat: no-repeat;    /* Prevents the image from tiling/repeating */
-    background-attachment: fixed;   /* Keeps background static while scrolling */
+    background-size: cover;          
+    background-position: center top;  
+    background-repeat: no-repeat;    
+    background-attachment: fixed;   
     
     color: #212529;
     opacity: 1;
@@ -43,7 +37,6 @@ body {
 .site-content {
     flex: 1;
 }
-
 
 
 /* ==========================================================================
@@ -69,7 +62,6 @@ header {
 }
 
 /* Hamburger Icon Toggle */
-
 body.nav-open {
     overflow: hidden;
     height: 100vh;
@@ -129,14 +121,12 @@ body.nav-open {
     visibility: hidden;
     transform: translateY(-20px);
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .nav-menu::-webkit-scrollbar {
     display: none;
-}
-.nav-menu {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
 .nav-menu.active { 
@@ -182,13 +172,13 @@ nav a.active-link {
    ========================================================================== */
 .hero {
     text-align: center;
-    padding: 25px 10px 30px 10px;
+    padding: 25px 7% 30px 7%;
     background-color: rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid #e1e1e1;
 }
 
 .hero h1 { 
-    font-size: 2.1rem; 
+    font-size: 1.7rem; 
     font-weight: 300; 
     letter-spacing: 1px; 
     margin-bottom: 8px; 
@@ -219,7 +209,6 @@ nav a.active-link {
 }
 
 .project-card, .gallery-card {
-    /* Glassmorphism styling */
     background-color: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -228,7 +217,6 @@ nav a.active-link {
     border-radius: 4px;
     overflow: hidden;
 }
-
 
 .project-card h3, .gallery-card-info h3 { 
     font-size: 1.15rem; 
@@ -242,7 +230,9 @@ nav a.active-link {
     font-size: 0.92rem; 
 }
 
-.project-img {
+/* Consolidated Image Styling */
+.project-img,
+.hpproject-img {
     width: 100%; 
     max-width: 100%; 
     height: auto;
@@ -253,51 +243,16 @@ nav a.active-link {
     margin-bottom: 15px;
     border-radius: 2px;
     cursor: pointer;
-}
-
-.project-img {
-  outline: none;
-  user-select: none;
+    outline: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .project-img:focus, 
-.project-img:active {
-  transform: none !important;
-}
-
-.project-img {
-  -webkit-user-drag: none;
-  user-select: none;
-}
-
-/* ********************** */
-
-.hpproject-img {
-    width: 100%; 
-    max-width: 100%; 
-    height: auto;
-    aspect-ratio: 4 / 3;
-    object-fit: contain;
-    background-color: rgba(255, 255, 255, 0.3);
-    display: block;
-    margin-bottom: 15px;
-    border-radius: 2px;
-    cursor: pointer;
-}
-
-.hpproject-img {
-  outline: none;
-  user-select: none;
-}
-
+.project-img:active,
 .hpproject-img:focus, 
 .hpproject-img:active {
   transform: none !important;
-}
-
-.hpproject-img {
-  -webkit-user-drag: none;
-  user-select: none;
 }
 
 
@@ -312,7 +267,6 @@ nav a.active-link {
 
 .masonry-grid {
     display: grid;
-    /* Automatically creates a uniform responsive grid with equal-sized columns */
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
     width: 100%;
@@ -335,10 +289,9 @@ nav a.active-link {
     box-sizing: border-box;
 }
 
-/* Forces a uniform image viewing box so tall and wide photos fit symmetrically */
 .masonry-img-wrapper {
     width: 100%;
-    height: 180px;              /* Adjust this height to make thumbnails taller or shorter */
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -353,7 +306,7 @@ nav a.active-link {
     max-height: 100%;
     width: auto;
     height: auto;
-    object-fit: contain;        /* Keeps full image visible without cropping */
+    object-fit: contain;
     cursor: pointer;
     outline: none;
     user-select: none;
@@ -373,12 +326,13 @@ nav a.active-link {
     color: #495057;
     letter-spacing: 0.3px;
     margin: 0;
-    /* Allow multi-line wrapping */
     white-space: normal;
     word-wrap: break-word;
     overflow: visible;
     text-overflow: clip;
 }
+
+
 /* ==========================================================================
    Modals & Full-Screen Overlays
    ========================================================================== */
@@ -449,7 +403,6 @@ nav a.active-link {
     z-index: 3500;
 }
 
-/* ADDED: Keeps image and text stacked and centered as a single unit */
 .lightbox-content {
     display: flex;
     flex-direction: column;
@@ -472,7 +425,7 @@ nav a.active-link {
     width: auto;
     height: auto;
     display: block;
-    margin: auto; /* Acts as a fail-safe centering margin for odd aspect ratios */
+    margin: auto;
 }
 
 #lightbox-title { 
@@ -506,18 +459,18 @@ nav a.active-link {
     font-size: 40px; 
     cursor: pointer; 
     padding: 20px; 
-      -webkit-user-select: none; /* Safari / macOS */
-  user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .prev-btn { left: 30px; } 
 .next-btn { right: 30px; }
 
-
 body.lightbox-open {
     overflow: hidden;
     height: 100vh;
 }
+
 
 /* ==========================================================================
    Footer & Back-To-Top Button
@@ -622,14 +575,12 @@ footer {
     border-color: #6c757d;
 }
 
-/* Gallery card wrapping adjustments */
 .gallery-card a.project-card-link {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
-/* Interactive hover effect for standalone hub cover images */
 .standalone-image-wrapper a {
     display: block;
     position: relative;
@@ -670,7 +621,7 @@ footer {
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 1700px; /* Aligned with .gallery-grid width boundary */
+    max-width: 1700px;
     margin: 50px auto 0 auto;
     padding: 0;
 }
@@ -679,8 +630,6 @@ footer {
     width: 100%;
     text-align: left;
     padding: 40px 30px;
-    
-    /* Signature glassmorphic box styling */
     background: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -704,9 +653,6 @@ footer {
     color: #495057;
 }
 
-/* ==========================================================================
-   Series Back Link
-   ========================================================================== */
 .series-back-link {
     margin-top: 40px;
     text-align: center;
@@ -716,8 +662,7 @@ footer {
     text-decoration: none;
     color: #212529;
     font-weight: 500;
-    font-size: 0.95ln; /* Or 0.95rem to match your standard typography */
-    font-size: 0.95rem;
+    font-size: 1.12rem;
     border-bottom: 1px solid #212529;
     padding-bottom: 2px;
     transition: color 0.2s ease, border-color 0.2s ease;
@@ -728,10 +673,78 @@ footer {
     border-color: #6c757d;
 }
 
+
 /* ==========================================================================
    Blog Posts & Content Formatting
    ========================================================================== */
-/* Controls size and alignment for images inserted within markdown blog posts */
+.post-content {
+    color: #495057;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.post-content > * + * {
+    margin-top: 1.25rem;
+}
+
+.post-content h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #212529;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.post-content h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #212529;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.post-content p {
+    margin-bottom: 1.25rem;
+}
+
+.post-content ul, 
+.post-content ol {
+    margin-top: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+}
+
+.post-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.post-content strong {
+    color: #212529;
+    font-weight: 600;
+}
+
+.post-content blockquote {
+    border-left: 3px solid #212529;
+    padding-left: 1.2rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #6c757d;
+}
+
+.post-content a {
+    color: #212529;
+    text-decoration: none;
+    border-bottom: 1px solid #212529;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.post-content a:hover {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
 .post-content img {
     max-width: 600px; 
     width: 100%;       
@@ -742,71 +755,33 @@ footer {
     border: 1px solid rgba(233, 236, 239, 0.6);
 }
 
+.post-content code {
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 0, 0.04);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+.post-content pre {
+    background-color: #212529;
+    color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.post-content pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+}
+
 
 /* ==========================================================================
-   Responsive Media Queries
+   Homepage & Card Layout Enhancements
    ========================================================================== */
-@media (max-width: 768px) {
-    .modal-content {
-        font-size: 1.05rem;
-    }
-
-}
-
-@media (max-width: 600px) { 
-    .nav-btn { 
-        display: none !important; 
-    } 
-
-}
-/* ==========================================================================
-   Enable smooth view transitions on navigation
-   ========================================================================== */
-
-
-/* Enable smooth view transitions on navigation */
-@view-transition {
-  navigation: auto;
-}
-
-/* Custom fade-down animation for outgoing page */
-::view-transition-old(root) {
-  animation: 0.3s ease-in-out both fade-down-out;
-}
-
-/* Custom fade-up animation for incoming page */
-::view-transition-new(root) {
-  animation: 0.3s ease-in-out both fade-up-in;
-}
-
-/* Define Keyframe Animations */
-@keyframes fade-down-out {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-}
-
-@keyframes fade-up-in {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ==========================================
-   HOMEPAGE & CARD LAYOUT ENHANCEMENTS
-   ========================================== */
-
-/* Section Layout Adjustments */
 .homepage-section-wrapper {
     margin-top: 0;
     margin-bottom: 30px;
@@ -836,17 +811,6 @@ footer {
     font-size: 1.1rem;
 }
 
-/* Back / View-All Links */
-.series-back-link {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.series-back-link a {
-    font-size: 1.12rem;
-}
-
-/* Card Information & Typography Spacing */
 .gallery-card-info {
     padding: 10px;
 }
@@ -883,10 +847,105 @@ footer {
     margin-bottom: -60px;
 }
 
-@media (max-width: 768px) {
- .homepage-wrapper .gallery-section {
-    margin-bottom: 5px;
+
+/* ==========================================================================
+   Single-Post & Single-Card Constraints
+   ========================================================================== */
+.gallery-grid:has(.gallery-card:only-child),
+.project-grid:has(.gallery-card:only-child) {
+    grid-template-columns: minmax(300px, 650px);
+    justify-content: center;
 }
-.homepage-contact-card {
-    margin-bottom: -50px;}
+
+.gallery-grid:has(.gallery-card:only-child) .project-img,
+.project-grid:has(.gallery-card:only-child) .project-img {
+    max-height: 320px;
+    width: auto;
+    margin: 0 auto 15px auto;
+    object-fit: contain;
+}
+
+.homepage-wrapper .gallery-grid:has(.project-card:only-child) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+.homepage-wrapper .gallery-grid:has(.project-card:only-child) .project-card {
+    max-width: none;
+}
+
+.homepage-wrapper .gallery-grid:has(.project-card:only-child) .hpproject-img,
+.homepage-wrapper .gallery-grid:has(.project-card:only-child) .project-img {
+    max-height: 260px;
+    width: auto;
+    margin: 0 auto 15px auto;
+    object-fit: contain;
+}
+
+
+/* ==========================================================================
+   View Transitions API
+   ========================================================================== */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: 0.3s ease-in-out both fade-down-out;
+}
+
+::view-transition-new(root) {
+  animation: 0.3s ease-in-out both fade-up-in;
+}
+
+@keyframes fade-down-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes fade-up-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ==========================================================================
+   Responsive Media Queries
+   ========================================================================== */
+@media (max-width: 1100px) {
+    .homepage-wrapper .gallery-grid:has(.project-card:only-child) {
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        font-size: 1.05rem;
+    }
+    .homepage-wrapper .gallery-section {
+        margin-bottom: 5px;
+    }
+    .homepage-contact-card {
+        margin-bottom: -50px;
+    }
+}
+
+@media (max-width: 600px) { 
+    .nav-btn { 
+        display: none !important; 
+    } 
 }
